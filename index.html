@@ -2,37 +2,50 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Mojitos and Friends</title>
-		<link href="css/mojitosandfriends.css"  type="text/css" rel="stylesheet">
-  		<link href="jquery.tweet.css" rel="stylesheet"/>
-  		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>	-->
-  	
-  
+		<title>Mojitos and friends</title>
+		<link href="css/mojitosandfriends.css"  type="text/css" rel="stylesheet"> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>	
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true_or_false&amp;key=ABQIAAAABB-Ib23PFdZ5W8izjohEDBRS6K7jZmwE4ryibryC7EWVIebX6RT_hGIEYvp3edkgFE2p_gQr3Rhiyg" type="text/javascript"></script>
+		<script src="js/mojitosandfriends.js"></script>	
 </head>
 	<body>
 		<section class="content">
-			<header>
-				<h1>
-						<ul id="sl_menu" class="sl_menu">
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Qué es esto</a></li>
-							<li><a href="#">Encuentros</a></li>
-
-						</ul>	
-				</h1>
-			</header>
- 			<section class="fechas">
+		<header>
+			<nav>
+				<ul>
+					<li class="first selected"><a href="#">Inicio</a></li>
+					<li class="second"><a href="#">De qué va esto</a></li>
+				</ul>
+			</nav>	
+			<!--<section class="logo"><img src="images/logo.png"/></section> -->
+		</header>
+			<section>
+				
+				<img src="images/logo.png" class="logo"/>
+			</section>
+			<section id="de-que-va-esto" class="presentacion" style="display:none">
+				<strong>De que va esto</strong>
+				<p><b>Mojito:</b>Bebida que se prepara con ron, zumo de limón, agua, hielo y azúcar, y se adorna con una rama de hierbabuena. Es una bebida refrescante y eso es lo que pretendemos aquí, organizar encuentros sin perioricidad predefinida. Pueden ser semanales, mensuales o anuales. Lo único que buscamos es crear un punto de encuentro para compartir conocimiento, experiencias e inquietudes.
+				</p>
+				<p><b>Friends:</b>Y que mejor que en un ambiente relajado y distendido en el que se fomente la participación de todo el mundo.No nos gustaría centrarnos en ningún perfil concreto, son bienvenidos diseñadores, programadores, psicólogos, médicos, mecánicos, persianistas o simplemente gente curiosa con ganas de aprender. 
+				</p>
+				<p>Si tienes algún proyecto interesante y te gustaría compartirlo, promocionarlo o buscas ayuda este puede ser un buen momento. </p>
+			</section>
+			<section class="mapa">
+					<div id="map2" height="300px" height="300px"></div>
+			</section>
+					
+			<section id="proximamente" class="fechas">
 				<strong>Proxima convocatoria</strong>
+				
 				<ul>
 					<li>
-						<span>06/07/2011</span>
-						<div>C/ Isabel Colbrand, 18 -- The Clover House</div>
+						<span>06 / 07 / 2011</span>
+						<div><strong>El Tigre</strong></div>
+						<div>Calle de las Infantas, 30 Madrid
+						<a href="#">Mapa</a></div>
 					</li>
-					<!-- <li><span>07 / 07 / 11</span>C/ Almansa, 85 -- Harbor</li>
-					<li><span>14 / 07 / 11</span>C/ Huertas, 57 -- La Fídula </li> -->
-					
 				</ul>	
-			</section>
-		</section>
+			</section> 
 	</body>
 </html>
