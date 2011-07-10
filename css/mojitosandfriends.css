@@ -18,7 +18,7 @@ body section.content{background-image: url("../images/logo-reflex.jpg");backgrou
 body section.presentacion{   color: #2F8500;float: left;text-shadow: 0 0 43px #000000;width: 100%;background-color:#fff;filter: alpha(opacity=80); opacity: .8;border-radius: 15px 15px 15px 15px;}
 body section.presentacion p{ color: #628C02;font-family: Verdana;line-height: 27px;padding-right: 22px;text-shadow: 0 0;width: 95%;background-color:#fff;}
 body section.presentacion strong{  border-bottom: 1px dashed;color: #9BDB08;display: block;font-family: Helvetica;font-size: 2.4em;font-weight: normal;margin-top: 0px;padding-bottom: 12px;text-decoration: none;text-shadow: 0 0;}
-body section.fechas{border-radius: 15px 15px 15px 15px;background-color: #F9FFED;border: 1px solid #6CBF02;box-shadow: 0 0 2px #999999 inset;color: #758E5B;float: left;font-family: Trebuchet MS; margin-top:0;padding: 20px;width: 240px;}
+body section.fechas{border-radius: 15px 15px 15px 15px;background-color: #F9FFED;border: 1px solid #6CBF02;box-shadow: 0 0 2px #999999 inset;color: #758E5B;float: left;font-family: Trebuchet MS; margin-top:0;margin-bottom:0;;padding: 20px;width: 240px;}
 body section.fechas ul{border-top: 1px dashed #999999;list-style: none outside none;margin: 0;padding: 0;}
 body section.fechas ul li{margin-top: 10px;}
 body section.fechas ul li span{color: #39BB00;font-family: monospace;font-size: 1.2em;font-weight: bold;margin-right: 20px;}
