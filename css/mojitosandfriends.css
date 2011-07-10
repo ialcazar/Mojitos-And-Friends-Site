@@ -30,6 +30,7 @@ body section.fechas2 ul li span{color: #39BB00;font-family: monospace;font-size:
 body section.fechas2 strong{color: #8BCD49;font-size: 1.3em;font-weight: bold;text-decoration: none;text-shadow: 0 0;}
 body section.form{float: left;font-family: verdana;font-size: 1.3em;font-weight: normal;margin-top: 230px;overflow: hidden;width: 100%;}
 body section.form strong{border-bottom: 1px dashed #D2F16F;border-top: 1px dashed #D2F16F;float: left;font-family: verdana;font-size: 1.3em;font-weight: normal;margin: 0 auto;padding: 4px;text-decoration: none;text-shadow: 0 0 1px #000000;width: 100%;padding-left: 16px}
+body section.map{width:280px; height: 230px;float:left;margin-top:5px;border-radius: 15px 15px 15px 15px}
 strong{   color: #21BC01;font-size: 3em;font-weight: bold;text-decoration: underline;text-shadow: 0 0 50px #000000;}
 label{color: #2F8500;display: block;font-size: 0.7em;}
 input, textarea{width:100%;}

@@ -12,21 +12,25 @@ function initEvents(){
 		$("#twitter").fadeIn();
 		$("#map2").fadeIn();
 		
-		$("section.content header nav ul li").removeClass("selected");
-		$("#li-index").addClass("selected");
+		selectMenuOption("#li-index");
 	});
 	$("#li-about").click(function(){
 		$("section.body section").hide();
 		$("#de-que-va-esto").fadeIn();
 		
-		$("section.content header nav ul li").removeClass("selected");
-		$("#li-about").addClass("selected");
+		selectMenuOption("#li-about");
 	});
 }
 
 function initEffects(){
 	$("#proximamente").slideDown("slow");
 }
+function selectMenuOption(sectionToSelect){
+	$("section.content header nav ul li").removeClass("selected");
+	$(sectionToSelect).addClass("selected");
+	
+}
+
 function loadGMaps() { 
 	      if (GBrowserIsCompatible()) {
 	        var map = new GMap2(document.getElementById("map2"));
