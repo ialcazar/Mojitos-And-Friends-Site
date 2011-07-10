@@ -7,7 +7,7 @@ body header nav{  margin: 0;padding: 0;top: 0;width:1000px;}
 body header nav ul{  height: 160px;list-style: none outside none;margin: 0;overflow: hidden;padding: 0 0 0 5px;width: 100%;}
 body header nav ul li{ box-shadow: 0 0 5px #000000;background-color: #FFFFFF;border: 2px solid #6CBF02;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;float: left;padding: 20px;border-top:0;cursor:pointer;}
 body header nav ul li.first{ padding-top: 80px;text-align: center;width: auto;}
-body header nav ul li.second{    margin-left: 10px;margin-right: 10px;text-align: center;w;padding-top: 80px;}
+body header nav ul li.second{    margin-left: 10px;margin-right: 10px;text-align: center;padding-top: 80px;}
 body header nav ul li.third{ padding-top: 80px;text-align: center;width: auto;}
 body header nav ul li a{font-family: Helvetica;color: #6CBF02;text-decoration:none;font-weight:bold;}
 body header nav ul li:hover{border-top:0;border: 2px solid #fff;background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.43, rgb(109,191,2)),color-stop(0.56, rgb(109,191,2)),color-stop(0.96, rgb(187,239,119)));background-image:-moz-linear-gradient(center bottom,rgb(109,191,2) 43%,rgb(109,191,2) 56%,rgb(187,239,119) 96%);color:#fff;}
@@ -31,6 +31,7 @@ body section.fechas2 strong{color: #8BCD49;font-size: 1.3em;font-weight: bold;te
 body section.form{float: left;font-family: verdana;font-size: 1.3em;font-weight: normal;margin-top: 230px;overflow: hidden;width: 100%;}
 body section.form strong{border-bottom: 1px dashed #D2F16F;border-top: 1px dashed #D2F16F;float: left;font-family: verdana;font-size: 1.3em;font-weight: normal;margin: 0 auto;padding: 4px;text-decoration: none;text-shadow: 0 0 1px #000000;width: 100%;padding-left: 16px}
 body section.map{width:280px; height: 230px;float:left;margin-top:5px;border-radius: 15px 15px 15px 15px}
+body section.attendees{width:600px;height:180px;float:left;margin-top:0;margin-left:5px}
 strong{   color: #21BC01;font-size: 3em;font-weight: bold;text-decoration: underline;text-shadow: 0 0 50px #000000;}
 label{color: #2F8500;display: block;font-size: 0.7em;}
 input, textarea{width:100%;}
@@ -48,3 +49,6 @@ ol.normal {
 li{text-shadow: 0 0;}
 a.link:link, a.link:visited {color:#39BB00; text-decoration: underline }
 a.link:hover {color:#39BB00; text-decoration: none }
+.info{margin-left: 900px;position: absolute;top: 80px;width: 200px;}
+.twitts{margin-left: 700px;position: absolute;top: 160px;width: 250px;}
+img.logo_follow{width:50px;height:50px}

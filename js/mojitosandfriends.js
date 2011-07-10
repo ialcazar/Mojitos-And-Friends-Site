@@ -9,8 +9,9 @@ function initEvents(){
 	$("#li-index").click(function(){
 		$("section.body section").hide();
 		$("#proximamente").slideDown();
-		$("#twitter").fadeIn();
+		$("#attendees").fadeIn();
 		$("#map2").fadeIn();
+		$("#twitts").fadeIn();
 		
 		selectMenuOption("#li-index");
 	});

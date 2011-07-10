@@ -17,14 +17,47 @@
 						<li class="second" id="li-about"><a href="#" id="lnk-about">De qué va esto</a></li>
 					</ul>
 				</nav>	
-				<!-- LOGO SUPERIOR
-				<section>
-
-					<img src="images/logo.png" class="logo"/>
+				<!-- LOGO twitter -->
+				<section class="info">
+					<a href="http://twitter.com/MojAndFriends" target="_blank"><img src="images/twitter_logo.png" class="logo_follow"/></a>
 				</section>
-				-->
+				
 			</header>
 		<section class="body">
+			<section id="twitts" class="twitts">
+					<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+					<script>
+					new TWTR.Widget({
+					  version: 2,
+					  type: 'profile',
+				      search: 'mojandfriends',
+					  title:'@mojAndFriends',
+					  interval: 2000,
+					  width: 'auto',
+					  height: 300,
+					  theme: {
+					    shell: {
+					     	background: '#088a11',
+						    color: '#ffffff'
+					    },
+					    tweets: {
+					      	background: '#ffffff',
+						      color: '#45c206',
+						      links: '#4e9131'
+					    }
+					  },
+					  features: {
+					    scrollbar: false,
+					    loop: false,
+					    live: true,
+					    hashtags: true,
+					    timestamp: true,
+					    avatars: true,
+					    behavior: 'all'
+					  }
+					}).render().setUser('mojandfriends').start();
+					</script>
+			</section>
 			<section id="de-que-va-esto" class="presentacion" style="display:none">
 				<strong>De que va esto</strong>
 				<p>Seguimos el formato <a class="link" href="http://es.wikipedia.org/wiki/BarCamp">Barcamp</a>. Queremos que sean reuniones espontáneas con el único objetivo de compartir y aprender en un entorno abierto a tod@s. No tenemos normas de inscripción, nuestras únicas reglas son:
@@ -56,7 +89,9 @@
 				</ul>
 			
 			</section> 
-			<section id="twitter" style="width:720px;float:right;margin-top:0"><p style="text-align:right">&nbsp;Texto	</p></section>
+			<section id="attendees" class="attendees">
+				<p style="text-align:left;margin-top:0;">&nbsp;</p>
+			</section>
 			<section id="map2" class="map">
 			</section>
 			
