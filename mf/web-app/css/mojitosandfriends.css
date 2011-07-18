@@ -1,0 +1,54 @@
+@import url('reset.css');
+
+body{color: #000;font-family: cursive; font-size: 1.2em;margin:0;padding:0;}
+body header{float:left;}
+body header h1{ background-image: url("../images/header-mf.png");background-position: 0 -38px;background-repeat: no-repeat;height: 200px;margin: 0;text-indent: -3000px;width: 1000px; }
+body header nav{  margin: 0;padding: 0;top: 0;width:1000px;}
+body header nav ul{  height: 160px;list-style: none outside none;margin: 0;overflow: hidden;padding: 0 0 0 5px;width: 100%;}
+body header nav ul li{ box-shadow: 0 0 5px #000000;background-color: #FFFFFF;border: 2px solid #6CBF02;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;float: left;padding: 20px;border-top:0;cursor:pointer;}
+body header nav ul li.first{ padding-top: 80px;text-align: center;width: auto;}
+body header nav ul li.second{    margin-left: 10px;margin-right: 10px;text-align: center;padding-top: 80px;}
+body header nav ul li.third{ padding-top: 80px;text-align: center;width: auto;}
+body header nav ul li a{font-family: Helvetica;color: #6CBF02;text-decoration:none;font-weight:bold;}
+body header nav ul li:hover{border-top:0;border: 2px solid #fff;background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.43, rgb(109,191,2)),color-stop(0.56, rgb(109,191,2)),color-stop(0.96, rgb(187,239,119)));background-image:-moz-linear-gradient(center bottom,rgb(109,191,2) 43%,rgb(109,191,2) 56%,rgb(187,239,119) 96%);color:#fff;}
+body header nav ul li.selected{border-top:0;border: 2px solid #fff;background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.43, rgb(109,191,2)),color-stop(0.56, rgb(109,191,2)),color-stop(0.96, rgb(187,239,119)));background-image: -moz-linear-gradient(center bottom,rgb(109,191,2) 43%,rgb(109,191,2) 56%,rgb(187,239,119) 96%);color:#fff;}
+body header nav ul li:hover a{color:#fff;}
+body header nav ul li.selected a{color:#fff;}
+body section.content{z-index:-10;background-image: url("../images/logo-reflex.jpg");background-position: -5px 3px;background-repeat: no-repeat;height: 800px;margin: 0 auto;width: 1000px;}
+body section.presentacion{   color: #2F8500;float: left;text-shadow: 0 0 43px #000000;width: 100%;background-color:#fff;filter: alpha(opacity=80); opacity: .8;border-radius: 15px 15px 15px 15px;}
+body section.presentacion p{ color: #628C02;font-family: Verdana;line-height: 27px;padding-right: 22px;text-shadow: 0 0;width: 95%;background-color:#fff;}
+body section.presentacion strong{  border-bottom: 1px dashed;color: #9BDB08;display: block;font-family: Helvetica;font-size: 2.4em;font-weight: normal;margin-top: 0px;padding-bottom: 12px;text-decoration: none;text-shadow: 0 0;}
+body section.fechas{border-radius: 15px 15px 15px 15px;background-color: #F9FFED;border: 1px solid #6CBF02;box-shadow: 0 0 2px #999999 inset;color: #758E5B;float: left;font-family: Trebuchet MS; margin-top:0;margin-bottom:0;;padding: 20px;width: 240px;}
+body section.fechas ul{border-top: 1px dashed #999999;list-style: none outside none;margin: 0;padding: 0;}
+body section.fechas ul li{margin-top: 10px;}
+body section.fechas ul li span{color: #39BB00;font-family: monospace;font-size: 1.2em;font-weight: bold;margin-right: 20px;}
+body section.fechas strong{color: #8BCD49;font-size: 1.1em;font-weight: bold;text-decoration: none;text-shadow: 0 0;}
+body section.fechas2{  background-color: #F9FFED;border: 1px solid #6CBF02;box-shadow: 0 0 10px #999999 inset;color: #758E5B;float: left;font-family: Trebuchet MS;margin-top: -45px;padding: 25px;width: 180px;}
+body section.fechas2 ul{border-top: 1px dashed #999999;list-style: none outside none;margin: 0;padding: 0;}
+body section.fechas2 ul li{margin-top: 25px;}
+body section.fechas2 ul li span{color: #39BB00;font-family: monospace;font-size: 1.2em;font-weight: bold;margin-right: 20px;}
+body section.fechas2 strong{color: #8BCD49;font-size: 1.3em;font-weight: bold;text-decoration: none;text-shadow: 0 0;}
+body section.form{float: left;font-family: verdana;font-size: 1.3em;font-weight: normal;margin-top: 230px;overflow: hidden;width: 100%;}
+body section.form strong{border-bottom: 1px dashed #D2F16F;border-top: 1px dashed #D2F16F;float: left;font-family: verdana;font-size: 1.3em;font-weight: normal;margin: 0 auto;padding: 4px;text-decoration: none;text-shadow: 0 0 1px #000000;width: 100%;padding-left: 16px}
+body section.map{width:280px; height: 230px;float:left;margin-top:5px;border-radius: 15px 15px 15px 15px}
+body section.attendees{width:600px;height:180px;float:left;margin-top:0;margin-left:5px}
+strong{   color: #21BC01;font-size: 3em;font-weight: bold;text-decoration: underline;text-shadow: 0 0 50px #000000;}
+label{color: #2F8500;display: block;font-size: 0.7em;}
+input, textarea{width:100%;}
+fieldset{float: left; width: 46%;border:none}
+textarea{border-bottom-right-radius: 68px;box-shadow: 0 0 9px #999999 inset;height: 154px;margin-top: 8px;}
+input[type="text"]{box-shadow: 0 0 10px #999999;height: 20px;margin-bottom: 6px;margin-top: 6px;}
+.button{background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.49, rgb(138,206,49)),color-stop(0.75, rgb(189,252,106)),color-stop(0.88, rgb(189,252,106)));background-image: -moz-linear-gradient(center bottom,rgb(138,206,49) 49%,rgb(189,252,106) 75%,rgb(189,252,106) 88%);border: 2px solid #FFFFFF;border-radius: 10px 10px 10px 10px;box-shadow: 0 0 4px #000000;color: #315600;float: left;font-family: helvetica;font-weight: bold;padding: 10px 40px;text-decoration: none;}
+.button:hover{box-shadow: 0 0 4px #000000 inset;border: 2px solid #fff;color: #D1FF8C;text-shadow: 0 0 4px #000}    
+.button:active{box-shadow: 0 0 4px #000000 inset;border: 2px solid #fff;color: #D1FF8C;text-shadow: 0 0 4px #000}
+.logo{height:150px;weight:150px;margin-left:300px;}
+body section.mapa{margin-top:200px}
+ol.normal {
+  list-style-type: lower-alpha;
+}
+li{text-shadow: 0 0;}
+a.link:link, a.link:visited {color:#39BB00; text-decoration: underline }
+a.link:hover {color:#39BB00; text-decoration: none }
+.info{margin-left: 900px;position: absolute;top: 80px;width: 200px;}
+.twitts{margin-left: 700px;position: absolute;top: 160px;width: 250px;}
+img.logo_follow{width:50px;height:50px}
