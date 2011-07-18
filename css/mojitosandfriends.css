@@ -14,7 +14,7 @@ body header nav ul li:hover{border-top:0;border: 2px solid #fff;background-image
 body header nav ul li.selected{border-top:0;border: 2px solid #fff;background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.43, rgb(109,191,2)),color-stop(0.56, rgb(109,191,2)),color-stop(0.96, rgb(187,239,119)));background-image: -moz-linear-gradient(center bottom,rgb(109,191,2) 43%,rgb(109,191,2) 56%,rgb(187,239,119) 96%);color:#fff;}
 body header nav ul li:hover a{color:#fff;}
 body header nav ul li.selected a{color:#fff;}
-body section.content{background-image: url("../images/logo-reflex.jpg");background-position: -5px 3px;background-repeat: no-repeat;height: 800px;margin: 0 auto;width: 1000px;}
+body section.content{z-index:-10;background-image: url("../images/logo-reflex.jpg");background-position: -5px 3px;background-repeat: no-repeat;height: 800px;margin: 0 auto;width: 1000px;}
 body section.presentacion{   color: #2F8500;float: left;text-shadow: 0 0 43px #000000;width: 100%;background-color:#fff;filter: alpha(opacity=80); opacity: .8;border-radius: 15px 15px 15px 15px;}
 body section.presentacion p{ color: #628C02;font-family: Verdana;line-height: 27px;padding-right: 22px;text-shadow: 0 0;width: 95%;background-color:#fff;}
 body section.presentacion strong{  border-bottom: 1px dashed;color: #9BDB08;display: block;font-family: Helvetica;font-size: 2.4em;font-weight: normal;margin-top: 0px;padding-bottom: 12px;text-decoration: none;text-shadow: 0 0;}
