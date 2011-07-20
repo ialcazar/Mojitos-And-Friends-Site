@@ -1,0 +1,51 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+Designer: Inti Churio
+Site: http://www.icgink.com/
+Twitter: @icgink
+Location: Madrid, Spain.
+
+Front - Developer & Backend Developer: Israel Alcázar
+Site: http://farmerdev.com
+Twitter: @ialcazar
+Location: Getafe - Madrid, Spain.
+
+
+							
+/* THANKS */
+
+To Fernando Redondo (@pronoide_fer) for inspiring the idea from his Java & Friends Experience
+
+						
+/* SITE */
+
+Last update: 2011/07/10 
+Platform: Jquery and Grails
+Software: TextMate and SpringSource Tool Suite
+
+                                    
+                               -o/-                       
+                               +oo//-                     
+                              :ooo+//:                    
+                             -ooooo///-                   
+                             /oooooo//:                   
+                            :ooooooo+//-                  
+                           -+oooooooo///-                 
+           -://////////////+oooooooooo++////////////::    
+            :+ooooooooooooooooooooooooooooooooooooo+:::-  
+              -/+ooooooooooooooooooooooooooooooo+/::////:-
+                -:+oooooooooooooooooooooooooooo/::///////:-
+                  --/+ooooooooooooooooooooo+::://////:-   
+                     -:+ooooooooooooooooo+:://////:--     
+                       /ooooooooooooooooo+//////:-        
+                      -ooooooooooooooooooo////-           
+                      /ooooooooo+oooooooooo//:            
+                     :ooooooo+/::/+oooooooo+//-           
+                    -oooooo/::///////+oooooo///-          
+                    /ooo+::://////:---:/+oooo//:          
+                   -o+/::///////:-      -:/+o+//-         
+                   :-:///////:-            -:/://         
+                     -////:-                 --//:        
+                       --                       -:        
