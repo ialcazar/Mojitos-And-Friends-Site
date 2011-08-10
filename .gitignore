@@ -1,4 +1,8 @@
 .DS_Store
 .metadata
+.settings
+.classpath
+.project
 Servers
 classes
+target

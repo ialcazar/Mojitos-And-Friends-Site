@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_mf_site_entity_Meeting" items="${meetings}" z="0ivX1mN4p4/fpHAZWTYQbRT1GiI=">
+        <table:table data="${meetings}" id="l_com_mf_site_entity_Meeting" path="/meetings" z="22j55iQn8OV1PTcENrZFEdSaPgY=">
+            <table:column id="c_com_mf_site_entity_Meeting_place" property="place" z="+qMBrm+LauJeIyu9/bAsDJxAzD0="/>
+            <table:column date="true" dateTimePattern="${meeting_startdate_date_format}" id="c_com_mf_site_entity_Meeting_startDate" property="startDate" z="fT1b3gW/rqxw+byb3L07NtGqRvE="/>
+            <table:column id="c_com_mf_site_entity_Meeting_address" property="address" z="8X6MIwjT77HpNvQOWgYqQpd2RYg="/>
+        </table:table>
+    </page:list>
+</div>
