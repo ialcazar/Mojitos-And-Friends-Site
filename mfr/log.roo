@@ -14,3 +14,8 @@ hint
 hint controllers
 controller scaffold --class com.mf.site.web.MeetingsController --entity com.mf.site.entity.Meeting
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2011-08-10 07:39:09
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-08-10 17:54:04
+hint test
+hint
+perform tests
+perform tests
