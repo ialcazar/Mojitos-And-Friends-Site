@@ -61,7 +61,7 @@ public class TestTwitterService {
 	}
 	
 	@Test
-	public void verifyCredentials_correct(){
+	public void verify_Credentials_correct(){
 		//TODO next test
 		fail();
 //		TwitterServiceT4j twitterService = new TwitterServiceT4j(twitterProvider);
