@@ -19,7 +19,7 @@ import com.mf.site.services.impl.TwitterServiceT4j;
 
 public class TestTwitterService {
 	private TwitterProvider twitterProvider;
-	private TwitterServiceT4j twitterService;
+	private TwitterService twitterService;
 	
 	@Before
 	public void setUp(){
@@ -38,7 +38,7 @@ public class TestTwitterService {
 		//ACT
 
 		
-		String authenticationUrl = twitterService.signin();
+		String authenticationUrl = twitterService.authenticate();
 		
 		//ASSERTS
 		verify(twitterProvider).authenticationURL();
@@ -55,7 +55,7 @@ public class TestTwitterService {
 		
 		//ACT
 		try{
-			twitterService.signin();
+			twitterService.authenticate();
 			fail();
 		}catch(ServiceException e){
 			assertThat(e.getMessage(),containsString("Authentication"));

@@ -1,26 +1,26 @@
 package com.mf.site.services.impl;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
 import com.mf.site.exceptions.ServiceException;
 import com.mf.site.exceptions.TwitterProviderException;
 import com.mf.site.model.MojitoUser;
 import com.mf.site.providers.TwitterProvider;
+import com.mf.site.services.TwitterService;
 
-
-
-
-
-
-
-
-public class TwitterServiceT4j {
+@Service
+public class TwitterServiceT4j implements TwitterService{
+	
 	private TwitterProvider  twitterProvider;
 	
-
+	@Inject
 	public TwitterServiceT4j(TwitterProvider twitterProvider) {
 		this.twitterProvider = twitterProvider;
 		
 	}
-	public String signin() throws ServiceException{
+	public String authenticate() throws ServiceException{
 			
 			String url = null;
 			try{
@@ -28,7 +28,6 @@ public class TwitterServiceT4j {
 			}catch(TwitterProviderException e){
 				throw new ServiceException(e);
 			}
-			
 			return url;
 		
 	}

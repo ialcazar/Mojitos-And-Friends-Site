@@ -29,7 +29,7 @@ import com.mf.site.providers.impl.TwitterProviderT4j;
 public class TestTwitterProvider {
 	private final String consumerKey = "Mq8IGEgB2wGcNCA2Qh3KPw";
 	private final String consumerSecret = "xFTscxX9WEkQNUtVaTm4ZaCm8xTkU7yBTK4UZCuss";
-	private final String returnUrl = "http://localhost/mfr/twitter/callback";
+	private final String returnUrl = "http://localhost:8080/mfr/twitter/callback";
 	private final String oauth_verifier ="1243";
 	
 	private TwitterProvider twitterProvider;
@@ -51,11 +51,9 @@ public class TestTwitterProvider {
 		when(twitter4j.getOAuthRequestToken(returnUrl)).thenReturn(requestToken);
 		
 		
-		
 		String urlExpected = twitterProvider.authenticationURL();
 		
 		assertNotNull(urlExpected);
-		
 		verifyTwitter4jRequestToken();
 	
 	}

@@ -20,3 +20,8 @@ hint
 perform tests
 perform tests
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2011-08-11 17:47:20
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-08-14 19:58:59
+hint controller
+hint controllers
+controller class com.mf.site.controllers.TwitterController 
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2011-08-14 20:25:56
