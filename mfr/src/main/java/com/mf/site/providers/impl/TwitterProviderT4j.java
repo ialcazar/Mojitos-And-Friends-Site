@@ -42,16 +42,18 @@ public class TwitterProviderT4j implements TwitterProvider {
 
 	public MojitoUser verifyCredentials(String oauth_verifier) {
 		User user = null;
+		MojitoUser mojitoUser = null;
+		AccessToken accessToken = null;
 		try {
-			AccessToken accessToken = twitter4j.getOAuthAccessToken(this.requestToken, oauth_verifier);
+			accessToken = twitter4j.getOAuthAccessToken(this.requestToken, oauth_verifier);
 			user = twitter4j.verifyCredentials();
+			if(user != null)
+				mojitoUser = new MojitoUser(user.getName(),user.getName(),user.getScreenName(),user.getProfileImageURL().toString());
 		} catch (TwitterException e) {
 			throw new TwitterProviderException(e);
 		}
 				
-		MojitoUser mojitoUser = new MojitoUser(user.getName(),user.getName(),user.getScreenName(),user.getProfileImageURL().toString());
 		
-
 		return mojitoUser;
 	}
 
