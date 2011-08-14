@@ -8,6 +8,7 @@
 	<version>0.1.0.BUILD-SNAPSHOT</version>
 	<name>mfr</name>
 	<properties>
+<!-- 		<org.springframework.social-version>1.0.0.RC2</org.springframework.social-version> -->
 		<roo.version>1.1.4.RELEASE</roo.version>
 		<spring.version>3.0.5.RELEASE</spring.version>
 		<aspectj.version>1.6.11</aspectj.version>
@@ -35,11 +36,7 @@
 			<url>https://repository.jboss.org/nexus/content/repositories/releases</url>
 			<name>JBoss Repo</name>
 		</repository>
-		<repository>
-			<id>twitter4j.org</id>
-			<name>twitter4j.org Repository</name>
-			<url>http://twitter4j.org/maven2</url>
-		</repository>
+
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -59,6 +56,14 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
+
+<!-- 		<dependency> -->
+
+<!-- 			<groupId>org.springframework.social</groupId> -->
+<!-- 			<artifactId>spring-social-twitter</artifactId> -->
+<!-- 			<version>${org.springframework.social-version}</version> -->
+<!-- 		</dependency> -->
+
 		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest-all</artifactId>
@@ -372,22 +377,6 @@
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-core</artifactId>
-			<version>2.2.1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-jsp</artifactId>
-			<version>2.2.1</version>
 		</dependency>
 	</dependencies>
 	<build>

@@ -6,31 +6,39 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import twitter4j.TwitterException;
-import twitter4j.User;
-
 import com.mf.site.exceptions.ServiceException;
+import com.mf.site.exceptions.TwitterProviderException;
+import com.mf.site.model.MojitoUser;
+import com.mf.site.providers.TwitterProvider;
 import com.mf.site.services.impl.TwitterServiceT4j;
 
 public class TestTwitterService {
+	private TwitterProvider twitterProvider;
+	private TwitterServiceT4j twitterService;
 	
+	@Before
+	public void setUp(){
+		twitterProvider	= mock(TwitterProvider.class);
+		twitterService  = new TwitterServiceT4j(twitterProvider);
+	}
 
 	@Test
-	public void authenticate_correct() throws TwitterException {
+	public void authenticate_correct()  {
 		//ARRANGE
 		String expectedAuthenticationUrl = "http://api.twitter.com/oauth/authenticate?oauth_token=null";
 		
-		TwitterProvider 	twitterProvider 	= mock(TwitterProvider.class);
+		
 		when(twitterProvider.authenticationURL()).thenReturn(expectedAuthenticationUrl);
 		
 		//ACT
 
-		TwitterServiceT4j twitterService = new TwitterServiceT4j(twitterProvider);
-		String authenticationUrl = twitterService.authenticate();
+		
+		String authenticationUrl = twitterService.signin();
 		
 		//ASSERTS
 		verify(twitterProvider).authenticationURL();
@@ -40,17 +48,14 @@ public class TestTwitterService {
 	}
 	
 	@Test
-	public void authenticate_with_error() throws TwitterException {
+	public void authenticate_with_error() {
 		//ARRANGE
 		
-		TwitterProvider 	twitterProvider 	= mock(TwitterProvider.class);
-		when(twitterProvider.authenticationURL()).thenThrow(new ServiceException("Authentication Failure"));
+		when(twitterProvider.authenticationURL()).thenThrow(new TwitterProviderException("Authentication Failure"));
 		
 		//ACT
-
-		TwitterServiceT4j twitterService = new TwitterServiceT4j(twitterProvider);
 		try{
-			twitterService.authenticate();
+			twitterService.signin();
 			fail();
 		}catch(ServiceException e){
 			assertThat(e.getMessage(),containsString("Authentication"));
@@ -61,12 +66,18 @@ public class TestTwitterService {
 	}
 	
 	@Test
-	public void verify_Credentials_correct(){
-		//TODO next test
-		fail();
-//		TwitterServiceT4j twitterService = new TwitterServiceT4j(twitterProvider);
-//		
-//		MojitoUser = twitterService.verifyCredentials(oauth_verifier);
+	public void verify_credentials_correct(){
+		String 		oauth_verifier = "1234";
+		MojitoUser 	mojitoUserExpected = new MojitoUser("ialcazar","Israel","Israel Alcázar","/img/userProfile.jpg");
+		
+		when(twitterProvider.verifyCredentials(oauth_verifier)).thenReturn(mojitoUserExpected);
+		
+		//ACT
+		MojitoUser mojitoUser = twitterService.verifyCredentials(oauth_verifier);
+		
+	
+        assertNotNull(mojitoUser);
+		verify(twitterProvider).verifyCredentials(oauth_verifier);
 
 		
 	}

@@ -1,9 +1,14 @@
 package com.mf.site.services.impl;
 
+import com.mf.site.exceptions.ServiceException;
+import com.mf.site.exceptions.TwitterProviderException;
+import com.mf.site.model.MojitoUser;
+import com.mf.site.providers.TwitterProvider;
 
 
 
-import com.mf.site.services.TwitterProvider;
+
+
 
 
 
@@ -15,15 +20,21 @@ public class TwitterServiceT4j {
 		this.twitterProvider = twitterProvider;
 		
 	}
-
-	public String authenticate() {
-		
+	public String signin() throws ServiceException{
 			
-			String url = twitterProvider.authenticationURL();
-			
+			String url = null;
+			try{
+				url = twitterProvider.authenticationURL();
+			}catch(TwitterProviderException e){
+				throw new ServiceException(e);
+			}
 			
 			return url;
 		
+	}
+	public MojitoUser verifyCredentials(String oauth_verifier) {
+		
+		return twitterProvider.verifyCredentials(oauth_verifier);
 	}
 
 }
