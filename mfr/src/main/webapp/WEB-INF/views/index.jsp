@@ -78,37 +78,39 @@
 				<p style="text-align:left;margin-top:0;">&nbsp;</p>
 			</section>
 			<section id="twitts" class="twitts">
-					<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 					<script>
 					new TWTR.Widget({
 					  version: 2,
-					  type: 'profile',
-				      search: 'mojandfriends',
-					  title:'@mojAndFriends',
-					  interval: 3000,
-					  width: 'auto',
+					  type: 'search',
+					  search: '#mojitosandfriends OR FROM:mojandfriends OR TO:mojandfriends ',
+					  interval: 6000,
+					  title: 'Mojiteando',
+					  subject: 'Nuestros Friends dicen:',
+					  width: auto,
 					  height: 300,
 					  theme: {
 					    shell: {
-					     	background: '#088a11',
+					    	background: '#088a11',
 						    color: '#ffffff'
 					    },
 					    tweets: {
-					      	background: '#ffffff',
+					    	background: '#ffffff',
 						      color: '#45c206',
 						      links: '#4e9131'
 					    }
 					  },
 					  features: {
 					    scrollbar: false,
-					    loop: false,
+					    loop: true,
 					    live: true,
 					    hashtags: true,
 					    timestamp: true,
 					    avatars: true,
+					    toptweets: true,
 					    behavior: 'default'
 					  }
-					}).render().setUser('mojandfriends').start();
+					}).render().start();
 					</script>
 			</section>
 			<section id="map2" class="map"></section>
