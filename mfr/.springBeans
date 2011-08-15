@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/test/resources/testContext.xml</config>
 		<config>src/main/resources/META-INF/spring/twitterContext.xml</config>
+		<config>src/main/resources/META-INF/spring/applicationContext-persistence.xml</config>
 	</configs>
 	<configSets>
 	</configSets>

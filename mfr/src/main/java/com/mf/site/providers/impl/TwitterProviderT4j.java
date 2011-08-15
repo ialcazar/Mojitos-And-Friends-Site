@@ -2,6 +2,7 @@ package com.mf.site.providers.impl;
 
 import javax.inject.Inject;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import twitter4j.Twitter;
@@ -17,6 +18,7 @@ import com.mf.site.model.MojitoUser;
 import com.mf.site.providers.TwitterProvider;
 
 @Component
+@Scope("prototype")
 public class TwitterProviderT4j implements TwitterProvider {
 	private String returnUrl;
 	
@@ -44,11 +46,15 @@ public class TwitterProviderT4j implements TwitterProvider {
 			twitter4j.setOAuthConsumer(consumerKey, consumerSecret);
 			requestToken = twitter4j.getOAuthRequestToken(returnUrl);
 			
+			return requestToken.getAuthenticationURL();
+			
 		} catch (TwitterException e) {
+			throw new TwitterProviderException(e);
+		} catch(Exception e){
 			throw new TwitterProviderException(e);
 		}
 		
-	    return requestToken.getAuthenticationURL();
+	    
 
 	}
 
@@ -60,8 +66,10 @@ public class TwitterProviderT4j implements TwitterProvider {
 			accessToken = twitter4j.getOAuthAccessToken(this.requestToken, oauth_verifier);
 			user = twitter4j.verifyCredentials();
 			if(user != null)
-				mojitoUser = new MojitoUser(user.getName(),user.getName(),user.getScreenName(),user.getProfileImageURL().toString());
+				mojitoUser = new MojitoUser(user.getScreenName(),user.getName(),user.getName(),user.getProfileImageURL().toString());
 		} catch (TwitterException e) {
+			throw new TwitterProviderException(e);
+		} catch(Exception e){
 			throw new TwitterProviderException(e);
 		}
 				

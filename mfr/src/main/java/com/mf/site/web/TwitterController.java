@@ -27,15 +27,27 @@ public class TwitterController {
 	}
 	
     @RequestMapping
-    public String authenticate() {
-    	return "redirect:"+twitterService.authenticate();
+    public String authenticate(HttpServletRequest request) {
+    	String redirect = "redirect:";
+    	HttpSession session = request.getSession(true);
+    	
+    	MojitoUser mojitoUser = (MojitoUser)session.getAttribute("mojitoUser");
+    	
+    	if(mojitoUser != null){
+    		redirect+="/";
+    	}else{
+    		redirect+=twitterService.authenticate();
+    	}
+    	
+    	return redirect;
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "{id}")
-    public void post(@PathVariable Long id, ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/error")
+    public String error(){
+    	return "redirect:/hey";
     }
 
-    @RequestMapping("callback")
+    @RequestMapping("/callback")
 	public String callback(HttpServletRequest request,Model model) {
 		MojitoUser mojitoUser = null;
     	HttpSession httpSession = null;
@@ -53,4 +65,5 @@ public class TwitterController {
     	}
 		return redirect;
 	}
+    
 }

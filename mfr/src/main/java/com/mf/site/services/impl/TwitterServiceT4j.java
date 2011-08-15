@@ -27,6 +27,8 @@ public class TwitterServiceT4j implements TwitterService{
 				url = twitterProvider.authenticationURL();
 			}catch(TwitterProviderException e){
 				throw new ServiceException(e);
+			}catch(Exception e){
+				throw new ServiceException(e);
 			}
 			return url;
 		

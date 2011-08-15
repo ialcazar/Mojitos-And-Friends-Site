@@ -47,18 +47,38 @@ public class UnitTestTwitterController {
 	}
 
 	@Test
-	public void login_with_twitter_is_ok()  {
+	public void login_with_twitter_first_time()  {
 		String authenticationUrlExpected = "redirect:http://api.twitter.com/oauth/authenticate";
 		
-		
+		when(request.getSession(true)).thenReturn(session);
+		when(session.getAttribute("mojitoUser")).thenReturn(null);
 		when(twitterService.authenticate()).thenReturn("http://api.twitter.com/oauth/authenticate");
 		
 		//ACT
 
-		String authenticationUrl = twitterController.authenticate();
+		String authenticationUrl = twitterController.authenticate(request);
 		
 		//ASSERTS
+		verify(request).getSession(true);
+		verify(session).getAttribute("mojitoUser");
 		verify(twitterService).authenticate();
+		assertThat(authenticationUrl,equalTo(authenticationUrlExpected));
+		
+
+	}
+	@Test
+	public void login_with_twitter_when_user_is_logged()  {
+		String authenticationUrlExpected = "redirect:/";
+		
+		when(request.getSession(true)).thenReturn(session);
+		when(session.getAttribute("mojitoUser")).thenReturn(mojitoUser);
+		//ACT
+
+		String authenticationUrl = twitterController.authenticate(request);
+		
+		//ASSERTS
+		verify(request).getSession(true);
+		verify(session).getAttribute("mojitoUser");
 		assertThat(authenticationUrl,equalTo(authenticationUrlExpected));
 		
 
