@@ -15,16 +15,17 @@ import twitter4j.auth.RequestToken;
 import com.mf.site.exceptions.TwitterProviderException;
 import com.mf.site.model.MojitoUser;
 
-import com.mf.site.providers.TwitterProvider;
+import com.mf.site.providers.TwitterProvider4j;
 
 @Component
 @Scope("prototype")
-public class TwitterProviderT4j implements TwitterProvider {
+public class TwitterProviderT4j implements TwitterProvider4j {
 	private String returnUrl;
 	
 	private Twitter twitter4j;
 	private RequestToken requestToken;
-	private AccessToken accessToken;
+	protected AccessToken accessToken;
+	
 	
 	
 	@Inject
@@ -42,8 +43,11 @@ public class TwitterProviderT4j implements TwitterProvider {
 		String consumerSecret = "xFTscxX9WEkQNUtVaTm4ZaCm8xTkU7yBTK4UZCuss";
 		String returnUrl = "http://localhost:8080/mfr/twitter/callback";
 		try {
+		
 			
 			twitter4j.setOAuthConsumer(consumerKey, consumerSecret);
+			
+			//TODO Save requestToken per User in a database
 			requestToken = twitter4j.getOAuthRequestToken(returnUrl);
 			
 			return requestToken.getAuthenticationURL();
@@ -76,5 +80,5 @@ public class TwitterProviderT4j implements TwitterProvider {
 		
 		return mojitoUser;
 	}
-
+	
 }

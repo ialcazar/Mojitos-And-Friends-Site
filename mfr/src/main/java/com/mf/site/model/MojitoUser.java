@@ -1,6 +1,7 @@
 package com.mf.site.model;
 
 import twitter4j.User;
+import twitter4j.auth.RequestToken;
 
 public class MojitoUser {
 
@@ -14,6 +15,16 @@ public class MojitoUser {
 		this.name = name;
 		this.screenName = screenName;
 		this.profileImg = profileImg;
+	}
+
+	public void setRequestToken(RequestToken requestToken) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getTwitterId() {
+		
+		return this.twitterId;
 	}
 
 

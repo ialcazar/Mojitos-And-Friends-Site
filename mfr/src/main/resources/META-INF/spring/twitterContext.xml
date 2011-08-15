@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="twitterFactory" class="twitter4j.TwitterFactory" />
-	<bean id="twitter4j" factory-bean="twitterFactory" factory-method="getInstance"/>
+	<bean id="twitter4j" factory-bean="twitterFactory" factory-method="getInstance" />
 	
 	
 </beans>

@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 import com.mf.site.exceptions.ServiceException;
 import com.mf.site.exceptions.TwitterProviderException;
 import com.mf.site.model.MojitoUser;
-import com.mf.site.providers.TwitterProvider;
+import com.mf.site.providers.TwitterProvider4j;
 import com.mf.site.services.TwitterService;
 
 @Service
 public class TwitterServiceT4j implements TwitterService{
 	
-	private TwitterProvider  twitterProvider;
+	private TwitterProvider4j  twitterProvider;
 	
 	@Inject
-	public TwitterServiceT4j(TwitterProvider twitterProvider) {
+	public TwitterServiceT4j(TwitterProvider4j twitterProvider) {
 		this.twitterProvider = twitterProvider;
 		
 	}

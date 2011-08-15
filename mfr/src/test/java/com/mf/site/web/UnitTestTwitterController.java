@@ -19,7 +19,7 @@ import org.springframework.ui.ModelMap;
 import com.mf.site.exceptions.ServiceException;
 import com.mf.site.exceptions.TwitterProviderException;
 import com.mf.site.model.MojitoUser;
-import com.mf.site.providers.TwitterProvider;
+import com.mf.site.providers.TwitterProvider4j;
 import com.mf.site.services.TwitterService;
 import com.mf.site.services.impl.TwitterServiceT4j;
 

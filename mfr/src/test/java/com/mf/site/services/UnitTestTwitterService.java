@@ -14,16 +14,16 @@ import org.junit.Test;
 import com.mf.site.exceptions.ServiceException;
 import com.mf.site.exceptions.TwitterProviderException;
 import com.mf.site.model.MojitoUser;
-import com.mf.site.providers.TwitterProvider;
+import com.mf.site.providers.TwitterProvider4j;
 import com.mf.site.services.impl.TwitterServiceT4j;
 
 public class UnitTestTwitterService {
-	private TwitterProvider twitterProvider;
+	private TwitterProvider4j twitterProvider;
 	private TwitterService twitterService;
 	
 	@Before
 	public void setUp(){
-		twitterProvider	= mock(TwitterProvider.class);
+		twitterProvider	= mock(TwitterProvider4j.class);
 		twitterService  = new TwitterServiceT4j(twitterProvider);
 	}
 
